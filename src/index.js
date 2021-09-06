@@ -1,2 +1,2 @@
-import Card from './components/Card/Card'
-export default Card
+import SingleInputForm from "./components/SingleInputForm/SingleInputForm";
+export default SingleInputForm;
