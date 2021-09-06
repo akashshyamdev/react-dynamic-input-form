@@ -5,8 +5,11 @@ import "./style.scss";
 export default function Input({ name, label }: InputProps) {
   return (
     <div className="input-group">
-      <label htmlFor={name}>{label}</label>
       <input id={name} type="text" className="input" />
+
+      <label htmlFor={name} className="label">
+        {label}
+      </label>
     </div>
   );
 }
