@@ -7,6 +7,7 @@ export interface Input {
 }
 
 export interface SingleInputFormProps {
+  heading: string;
   inputClass?: string;
   containerClass?: string;
   list: { value: string }[];

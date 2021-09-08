@@ -6,6 +6,7 @@ import "./style.scss";
 export default function SingleInputForm({
   list,
   setList,
+  heading,
   inputClass,
   containerClass,
 }: SingleInputFormProps) {
@@ -30,6 +31,7 @@ export default function SingleInputForm({
 
   return (
     <div className={containerClass}>
+      <h4>{heading}</h4>
       <button onClick={addItem}>Add</button>
 
       {list.map((item, i) => (
