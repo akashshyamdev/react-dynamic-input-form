@@ -7,7 +7,11 @@ export default function SingleInputForm({
   list,
   setList,
 }: SingleInputFormProps) {
-  const onChange = (value: string, i: number) => {
+  const addItem = () => {
+    setList([...list, { value: "" }]);
+  };
+
+  const updateItem = (value: string, i: number) => {
     const newList = [...list];
     const item = newList[i];
     item.value = value;
@@ -15,8 +19,11 @@ export default function SingleInputForm({
     setList(newList);
   };
 
-  const addItem = () => {
-    setList([...list, { value: "" }]);
+  const deleteItem = (i: number) => {
+    const newList = [...list];
+
+    newList.splice(i, 1);
+    setList(newList);
   };
 
   return (
@@ -24,13 +31,15 @@ export default function SingleInputForm({
       <button onClick={addItem}>Add</button>
 
       {list.map((item, i) => (
-        <div key={i}>
+        <div key={i} className="input-container">
           <Input
             label=""
             name=""
-            onChange={(val) => onChange(val, i)}
+            onChange={(val) => updateItem(val, i)}
             value={item.value}
           />
+
+          <button onClick={() => deleteItem(i)}>Delete</button>
         </div>
       ))}
     </div>
