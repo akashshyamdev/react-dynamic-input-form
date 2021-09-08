@@ -7,10 +7,9 @@ function App() {
 
   return (
     <div>
-      <h1>Example</h1>
-
       <SingleInputForm
         list={list}
+        heading="Example 1"
         setList={setList}
         containerStyles={{ gridTemplateColumns: "2fr 2fr 1fr" }}
       />
