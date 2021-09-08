@@ -7,9 +7,9 @@ export interface Input {
 }
 
 export interface SingleInputFormProps {
+  list: { value: string }[];
+  setList: React.Dispatch<React.SetStateAction<SingleInputFormProps["list"]>>;
   containerStyles?: {};
-  onDelete: (e: any) => void;
-  inputs: Input[];
 }
 
 export interface InputProps {
