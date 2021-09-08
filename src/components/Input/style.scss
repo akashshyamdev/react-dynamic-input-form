@@ -1,29 +1,25 @@
-.input-group {
-  position: relative;
-  margin-bottom: 1.5rem;
+// .input-group {
+//   position: relative;
+//   margin-bottom: 1.5rem;
 
-  .input {
-    position: absolute;
-    left: 0;
-    background-color: transparent;
+//   .input {
+//     position: absolute;
+//     left: 0;
+//     background-color: transparent;
 
-    &:focus + .label,
-    &:valid + .label {
-      font-size: 75%;
-      transform: translate3d(0, -100%, 0);
-      opacity: 1;
-    }
-  }
+//     &:focus + .label,
+//     &:valid + .label {
+//       font-size: 75%;
+//       transform: translate3d(0, -100%, 0);
+//       opacity: 1;
+//     }
+//   }
 
-  .label {
-    position: absolute;
-    top: 0;
-    padding: 7px 0 0 13px;
-    transition: all 200ms;
-    opacity: 0.5;
-  }
-
-  &.is-focused .label {
-    transform: translateY(-20px) scale(0.55);
-  }
-}
+//   .label {
+//     position: absolute;
+//     top: 0;
+//     padding: 7px 0 0 13px;
+//     transition: all 200ms;
+//     opacity: 0.5;
+//   }
+// }

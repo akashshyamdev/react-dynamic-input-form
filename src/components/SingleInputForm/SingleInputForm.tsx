@@ -1,5 +1,6 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 import { SingleInputFormProps } from "../../interfaces";
+import Input from "../Input";
 import "./style.scss";
 
 export default function SingleInputForm({
@@ -7,28 +8,29 @@ export default function SingleInputForm({
   inputs,
   containerStyles,
 }: SingleInputFormProps) {
+  console.log("LINKED 2");
   return (
-    <div className="form__input-container" style={containerStyles}>
+    <div className="form" style={containerStyles}>
       {inputs.map(
         (
           { value, label: placeholder, onChange, validator, helperText },
           index
         ) => {
           return (
-            <input
+            <Input
               key={index}
+              name={placeholder}
               value={value}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                onChange(e.target.value)
-              }
+              label={placeholder}
+              onChange={onChange}
+              validator={validator}
+              helperText={helperText}
             />
           );
         }
       )}
 
-      <button onClick={onDelete} className="form__input-container-icon">
-        Delete
-      </button>
+      <button onClick={onDelete}>Delete</button>
     </div>
   );
 }
