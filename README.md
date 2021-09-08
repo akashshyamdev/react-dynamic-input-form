@@ -69,9 +69,17 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Node](https://nodejs.org/en/) installed.
 
 ## :checkered_flag: Starting
+
+##### Install module
+
+```bash
+$ npm i react-dynamic-input-form
+```
+
+## :checkered_flag: Contributing
 
 ```bash
 # Clone this project
