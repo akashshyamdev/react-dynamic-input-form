@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export interface Input {
   label: string;
   value: string | number;
@@ -9,8 +7,8 @@ export interface Input {
 }
 
 export interface SingleInputFormProps {
-  inputClass: string;
-  containerStyles?: {};
+  inputClass?: string;
+  containerClass?: string;
   list: { value: string }[];
   setList: React.Dispatch<React.SetStateAction<SingleInputFormProps["list"]>>;
 }
