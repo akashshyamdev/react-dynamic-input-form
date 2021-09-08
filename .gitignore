@@ -79,6 +79,7 @@ typings/
 
 # build output
 
+example/public
 .next
 
 # distribution
