@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Input {
   label: string;
   value: string | number;
@@ -7,16 +9,14 @@ export interface Input {
 }
 
 export interface SingleInputFormProps {
+  inputClass: string;
+  containerStyles?: {};
   list: { value: string }[];
   setList: React.Dispatch<React.SetStateAction<SingleInputFormProps["list"]>>;
-  containerStyles?: {};
 }
 
 export interface InputProps {
-  name: string;
-  label: string;
-  helperText?: string;
+  className?: string;
   value: string | number;
   onChange: (value: string) => void;
-  validator?: (value: InputProps["value"]) => boolean;
 }
