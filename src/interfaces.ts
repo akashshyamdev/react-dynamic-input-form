@@ -10,6 +10,8 @@ export interface SingleInputFormProps {
   heading: string;
   inputClass?: string;
   containerClass?: string;
+  addButtonClass?: string;
+  inputContainerClass?: string;
   list: { value: string }[];
   setList: React.Dispatch<React.SetStateAction<SingleInputFormProps["list"]>>;
 }

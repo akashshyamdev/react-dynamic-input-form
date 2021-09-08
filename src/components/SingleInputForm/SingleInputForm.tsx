@@ -9,6 +9,8 @@ export default function SingleInputForm({
   heading,
   inputClass,
   containerClass,
+  addButtonClass,
+  inputContainerClass,
 }: SingleInputFormProps) {
   const addItem = () => {
     setList([...list, { value: "" }]);
@@ -31,11 +33,13 @@ export default function SingleInputForm({
 
   return (
     <div className={containerClass}>
-      <h4>{heading}</h4>
-      <button onClick={addItem}>Add</button>
+      <h3>{heading}</h3>
+      <button className={addButtonClass} onClick={addItem}>
+        Add
+      </button>
 
       {list.map((item, i) => (
-        <div key={i} className="input-container">
+        <div key={i} className={`input-container ${inputContainerClass}`}>
           <Input
             value={item.value}
             className={inputClass}
